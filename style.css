@@ -1,0 +1,104 @@
+body {
+  background-color: grey;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Playpen Sans", cursive;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
+main {
+  background-color: black;
+  color: rgba(240, 255, 255, 0.565);
+  margin: auto;
+  width: 500px;
+  min-height: 70vh;
+  border-radius: 20px;
+  padding: 40px;
+  font-size: 1.2rem;
+}
+.input {
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+#ins {
+  flex: 1;
+  border: none;
+  outline: none;
+  width: 60%;
+  height: 20px;
+  background: rgba(61, 37, 37, 0.93);
+  color: rgba(240, 255, 255, 0.51);
+
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 10px;
+  margin-right: 5px;
+}
+
+#btn {
+  border: none;
+  outline: none;
+  background-color: rgba(61, 37, 37, 0.93);
+  color: rgba(240, 255, 255, 0.51);
+  font-weight: 600;
+
+  border-radius: 20px;
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#onebyone li {
+  list-style: none;
+  font-size: 20px;
+  user-select: none;
+  cursor: pointer;
+  padding: 12px 8px 12px 50px;
+  position: relative;
+}
+
+#onebyone li::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-image: url(./images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+#onebyone li.marked {
+  color: rgb(51, 175, 51);
+}
+#onebyone li.marked::before {
+  color: rgb(91, 207, 91);
+  background-image: url(./images/checked.png);
+}
+
+#onebyone li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  color: aquamarine;
+  text-align: center;
+  border: 1px solid rgba(61, 37, 37, 0.93);
+  border-radius: 50%;
+  line-height: 40px;
+}
+#onebyone li span:hover {
+  background-color: rgba(8, 84, 8, 0.434);
+}
